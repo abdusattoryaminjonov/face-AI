@@ -7,11 +7,11 @@ while (cap.isOpened()):
     if ret == True:
         gray_img = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         faces_rect = haar_cascade.detectMultiScale(gray_img, 1.1, 9)
-        c = 0
+        i = 0
         for (x, y, w, h) in faces_rect:
             face = frame[y:y+h, x:x+w]
-            cv2.imshow('face'+str(c), face)
-            c = c + 1
+            cv2.imshow('face'+str(i), face)
+            i = i + 1
             cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 3)
 
         cv2.imshow('Frame', frame)
