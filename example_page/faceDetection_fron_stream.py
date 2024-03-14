@@ -7,7 +7,7 @@ cap = cv2.VideoCapture(0)
 if (cap.isOpened() == False):
     print("Error opening video file")
 
-haar_cascade = cv2.CascadeClassifier('Haarcascade_frontalface_default.xml')
+haar_cascade = cv2.CascadeClassifier('../service/haarcascade_frontalface_default.xml')
 while (cap.isOpened()):
     ret, frame = cap.read()
     if ret == True:

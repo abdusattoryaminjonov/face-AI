@@ -1,6 +1,6 @@
 import cv2
 cap = cv2.VideoCapture(r'D:\Projects\resourses\vf.avi')
-haar_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+haar_cascade = cv2.CascadeClassifier('../service/haarcascade_frontalface_default.xml')
 
 while (cap.isOpened()):
     ret, frame = cap.read()
