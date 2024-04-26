@@ -1,10 +1,10 @@
 import cv2
 
-img = cv2.imread('../images/marvel.jpg')
+img = cv2.imread('../images/otabek_3.jpg')
 
 gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-haar_cascade = cv2.CascadeClassifier('../service/haarcascade_frontalface_default.xml')
+haar_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 faces_rect = haar_cascade.detectMultiScale(gray_img, 1.1, 9)
 
